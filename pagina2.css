@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Configurações Globais (Reset)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna (um embaixo do outro) */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    gap: 15px;               /* Espaçamento padrão entre os elementos */
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Elementos de Texto e Título
+   ========================================================================== */
+h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: -5px; /* Traz a label ligeiramente mais perto do input */
+}
+
+/* ==========================================================================
+   Formulário (Campos e Botões)
+   ========================================================================== */
+#numeroinput {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#numeroinput:focus {
+    border-color: #3498db;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+#btnGerar {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+#btnGerar:hover {
+    background-color: #2980b9;
+}
+
+#btnGerar:active {
+    transform: scale(0.98); /* Efeito de clique do botão afundando levemente */
+}
+
+/* ==========================================================================
+   Área de Resultado da Tabuada
+   ========================================================================== */
+#resultadotabuada {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* CORREÇÃO DO JS: Esta regra estiliza o texto que seu script jogar aqui dentro.
+   Se o seu JavaScript usar <br> ou apenas texto puro, essa configuração 
+   vai criar um fundo branco elegante e bordas suaves apenas quando houver resultado. */
+#resultadotabuada:not(:empty) {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+}

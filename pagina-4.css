@@ -1,0 +1,78 @@
+/* Importando uma fonte bonita do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Card principal */
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h1 { color: #333; margin-bottom: 1.5rem; }
+
+/* Input com efeito interativo */
+input[type="number"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+}
+
+/* Botão com efeito de escala ao clicar */
+button {
+    background: #5c6bc0;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover { background: #3f51b5; }
+button:active { transform: scale(0.95); }
+
+/* Lista de resultados organizada */
+#resultadoTabuada {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.item-tabuada {
+    padding: 8px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-left: 4px solid #74ebd5;
+    border-radius: 4px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Animação para aparecer a tabuada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
