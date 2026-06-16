@@ -1,0 +1,130 @@
+/* Reset básico para limpar as margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do fundo da página */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Título Principal */
+h1 {
+    color: #1a73e8;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo do rótulo (label) */
+label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Campo de entrada de texto/número */
+input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Efeito de foco no input */
+input[type="number"]:focus {
+    border-color: #1a73e8;
+}
+
+/* Botão de Gerar */
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-bottom: 25px;
+}
+
+/* Efeito de passar o mouse e clicar no botão */
+button:hover {
+    background-color: #155cb4;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Container do Resultado */
+#resultadotabuada {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Se a div estiver vazia, ela some para não ocupar espaço */
+#resultadotabuada:empty {
+    display: none;
+}
+
+/* Título dentro do resultado */
+#resultadotabuada h2 {
+    font-size: 1.3rem;
+    color: #5f6368;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 8px;
+}
+
+/* Linhas da tabuada */
+#resultadotabuada p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #4a4a4a;
+}
+
+/* Destaque para o número final */
+#resultadotabuada strong {
+    color: #1a73e8;
+}
+
+/* Mensagem de erro caso o campo esteja vazio */
+.erro {
+    color: #d93025 !important;
+    font-weight: bold;
+}
+
+/* Animação suave para o resultado aparecer */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
