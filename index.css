@@ -1,4 +1,4 @@
-/* Reset básico para limpar as margens padrão */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilização do fundo da página */
+/* Fundo da página */
 body {
     background-color: #f0f2f5;
     display: flex;
@@ -18,23 +18,23 @@ body {
     color: #333;
 }
 
-/* Título Principal */
+/* Título */
 h1 {
     color: #1a73e8;
     margin-bottom: 25px;
     font-size: 2.2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center;
 }
 
-/* Estilo do rótulo (label) */
+/* Label */
 label {
     font-size: 1.1rem;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
-/* Campo de entrada de texto/número */
+/* Input */
 input[type="number"] {
     width: 100%;
     max-width: 300px;
@@ -48,12 +48,11 @@ input[type="number"] {
     text-align: center;
 }
 
-/* Efeito de foco no input */
 input[type="number"]:focus {
     border-color: #1a73e8;
 }
 
-/* Botão de Gerar */
+/* Botão Gerar */
 button {
     width: 100%;
     max-width: 300px;
@@ -66,17 +65,12 @@ button {
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    transition: background-color 0.2s, transform 0.1s;
-    margin-bottom: 25px;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
 }
 
-/* Efeito de passar o mouse e clicar no botão */
 button:hover {
     background-color: #155cb4;
-}
-
-button:active {
-    transform: scale(0.98);
 }
 
 /* Container do Resultado */
@@ -88,43 +82,50 @@ button:active {
     width: 100%;
     max-width: 300px;
     text-align: center;
-    animation: fadeIn 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-/* Se a div estiver vazia, ela some para não ocupar espaço */
+/* Esconde a div se estiver vazia */
 #resultadotabuada:empty {
     display: none;
 }
 
-/* Título dentro do resultado */
 #resultadotabuada h2 {
     font-size: 1.3rem;
     color: #5f6368;
     margin-bottom: 15px;
-    border-bottom: 2px solid #f0f2f5;
-    padding-bottom: 8px;
 }
 
-/* Linhas da tabuada */
 #resultadotabuada p {
     font-size: 1.1rem;
     margin: 8px 0;
-    color: #4a4a4a;
 }
 
-/* Destaque para o número final */
 #resultadotabuada strong {
     color: #1a73e8;
 }
 
-/* Mensagem de erro caso o campo esteja vazio */
-.erro {
-    color: #d93025 !important;
+/* NOVO: Botão de Navegação (Link estilizado) */
+.btn-proximo {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: #34a853; /* Cor Verde */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-/* Animação suave para o resultado aparecer */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.btn-proximo:hover {
+    background-color: #2d8e47;
+}
+
+.erro {
+    color: #d93025;
+    font-weight: bold;
 }
